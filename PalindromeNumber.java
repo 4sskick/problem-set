@@ -1,5 +1,5 @@
 
-/**
+/*
  * determine whether an integer us a palindrome. An integer is a palindrome when
  * it reads the same backwards as forwards
  * 

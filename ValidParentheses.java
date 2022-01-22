@@ -1,6 +1,12 @@
 import java.util.Scanner;
 import java.util.Stack;
 
+/*
+ * in case input: '({)})'
+ * would return 'valid' or 'invalid'
+ * 
+ */
+
 public class ValidParentheses {
 
 	public static void main(String[] args) {

@@ -3,19 +3,15 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
 
-/**
+/*
  * case input: 'world hel2o'
- * 
  * would return 'hello world'
  * 
  * another case input: 'seaside the to sent be to ne2ds army ten of team a'
- * 
  * would return 'a team of ten army needs to be sent to the seaside'
  * 
  * operation to use:
- * 
  * - reverse
- * 
  * - decrypting input
  */
 
@@ -41,7 +37,7 @@ public class DecryptTheEncrypted {
 			sTemp.add(sSplit[i]);
 			
 			for(Character c: sSplit[i].toCharArray()) {
-				if()
+//				if()
 			}
 		}
 
