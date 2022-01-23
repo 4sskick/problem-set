@@ -1,16 +1,18 @@
+import java.util.Arrays;
 
 public class SortManually {
 
 	public static void main(String[] args) {
-		int[] a = new int[] { 1, 2, 3, 1, 2, 3 };
+//		int[] a = new int[] { 1, 2, 3, 1, 2, 3 };
 		// expected = 1,1,2,2,3,3
 
-		int[] sorted = sort(a);
-		for (int i = 0; i < a.length; i++) {
-			
+		int[] a = new int[] { 8, 5, 2, 4, 6, 3, 7 };
+//		int[] a = new int[] { 9, 14, 3, 2, 43, 11, 58, 22 };
 
-			System.out.print(sorted[i]);
-		}
+		int[] sorted = insertSort(a);
+
+		System.out.print(Arrays.toString(sorted));
+
 	}
 
 	static int[] sort(int[] in) {
@@ -31,11 +33,28 @@ public class SortManually {
 	}
 
 	static int[] quickSort(int[] in, int lo, int hi) {
-		
-		if(lo< hi) {
-			
+
+		if (lo < hi) {
+
 		}
-		
+
 		return new int[] {};
+	}
+
+	static int[] insertSort(int[] in) {
+
+		//big O(n^2)
+		for (int i = 1; i < in.length; i++) {
+
+			int key = in[i];
+			int j = i;
+			while (j > 0 && in[j - 1] > key) {
+				in[j] = in[j - 1];
+				j--;
+			}
+			in[j] = key;
+		}
+
+		return in;
 	}
 }
