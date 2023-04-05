@@ -1,4 +1,5 @@
 import data.Node
+import java.util.*
 
 fun main() {
 
@@ -11,16 +12,39 @@ fun main() {
 //      }
 
       //"linked list"
-      val node1 = Node(value = 1)
-      val node2 = Node(value = 2)
-      val node3 = Node(value = 3)
+//      val node1 = Node(value = 1)
+//      val node2 = Node(value = 2)
+//      val node3 = Node(value = 3)
+//
+//      //linking next of n1 to n2
+//      node1.next = node2
+//      node2.next = node3
+//      //would be: node1.value -> node2.value -> node3.value
+//
+//      print(node1)
 
-      //linking next of n1 to n2
-      node1.next = node2
-      node2.next = node3
-      //would be: node1.value -> node2.value -> node3.value
+      "[(]{)}".validParenthesis().also { println(if (it) "valid" else "tidak valid") }
+      "[(]{)".validParenthesis().also { println(if (it) "valid" else "tidak valid") }
+}
 
-      print(node1)
+fun String.validParenthesis(): Boolean {
+      var temp = Stack<Char>()
+
+      for (c in this.toCharArray()) {
+            if (temp.isEmpty())
+                  temp.push(c)
+            else {
+                  if (c == '(' && temp.peek() == ')' || c == ')' && temp.peek() == '(')
+                        temp.pop()
+                  else if (c == '[' && temp.peek() == ']' || c == ']' && temp.peek() == '[')
+                        temp.pop()
+                  else if (c == '{' && temp.peek() == '}' || c == '}' && temp.peek() == '{')
+                        temp.pop()
+
+            }
+      }
+
+      return temp.empty()
 }
 
 fun List<Int>.sortedListSearch(find: Int): Boolean {

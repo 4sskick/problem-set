@@ -20,11 +20,11 @@ public class SticlyIncreaseSequence {
 
 		int[] input = new int[] { 2, 9, 4, 8, 7 };
 
-//		int output[] = solve(input.length, input);
-		String output_ = solve_(input.length, input);
+		int output[] = solve(input.length, input);
+//		String output_ = solve_(input.length, input);
 
-//		System.out.print(Arrays.toString(output));
-		System.out.print(output_);
+		System.out.print(Arrays.toString(output));
+//		System.out.print(output_);
 
 	}
 

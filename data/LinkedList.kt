@@ -17,6 +17,13 @@ class LinkedList<T> {
             }
       }
 
+      fun value(): T {
+            return head!!.value
+      }
+
+      var currentNode: Node<T>? = tail
+      var next: Node<T>? = head?.next
+
       //push
       //pushing into an empty list, the new node is both the head and tail of the list.
       // Since the list now has a new node, you increment the value of size.

@@ -9,13 +9,14 @@ public class SortManually {
 		int[] a = new int[] { 8, 5, 2, 4, 6, 3, 7 };
 //		int[] a = new int[] { 9, 14, 3, 2, 43, 11, 58, 22 };
 
-		int[] sorted = insertSort(a);
+//		int[] sorted = insertSort(a);
+		int[] sorted = sort(a);
 
 		System.out.print(Arrays.toString(sorted));
 
 	}
 
-	static int[] sort(int[] in) {
+	public static int[] sort(int[] in) {
 
 		for (int i = 0; i < in.length; i++) {
 			for (int j = i + 1; j < in.length; j++) {

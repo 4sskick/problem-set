@@ -17,8 +17,8 @@ public class TwoSum {
 	public static class Solution {
 		public static void func(int[] nums, int target) {
 			long startTime = System.nanoTime();
-//			solution1(nums, target);
-			solution2(nums, target);
+			solution1(nums, target);
+//			solution2(nums, target);
 
 			long endTime = System.nanoTime();
 			System.out.println("\nTook " + (endTime - startTime) + " ns");
@@ -27,9 +27,10 @@ public class TwoSum {
 		static void solution1(int[] nums, int target) {
 			for (int i = 0; i < nums.length; i++) {
 				for (int j = i + 1; j < nums.length; j++) {
-					int complement = target - nums[i];
-
-					if (nums[j] == complement)
+//					int complement = target - nums[i];
+//
+//					if (nums[j] == complement)
+					if(nums[i] + nums[j] == target)
 						System.out.println(String.format("%s,%s", i, j));
 				}
 			}

@@ -80,18 +80,34 @@ public class PalindromeNumber {
 	}
 
 	public static boolean isPalindrome(int input) {
-		if (input < 0)
-			return false;
+//		if (input < 0)
+//			return false;
+//
+//		int reverse = 0, copy = input;
+//
+//		while (copy > 0) {
+//			int digit = copy % 10;
+//			reverse = reverse * 10 + digit;
+//			copy /= 10;
+//		}
+//
+//		return reverse == input;
 
-		int reverse = 0, copy = input;
+		int palindrome = input; // copied number into variable
+		int reverse = 0;
 
-		while (copy > 0) {
-			int digit = copy % 10;
-			reverse = reverse * 10 + digit;
-			copy /= 10;
+		while (palindrome != 0) {
+			int remainder = palindrome % 10;
+			reverse = reverse * 10 + remainder;
+			palindrome = palindrome / 10;
 		}
 
-		return reverse == input;
+		// if original and the reverse of number is equal means
+		// number is palindrome in Java
+		if (input == reverse) {
+			return true;
+		}
+		return false;
 	}
 
 }
