@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
 
-public class Reversal {
+public class StringReversal {
 
     public static void main(String[] args){
         String input = "Codecademy is the best";
